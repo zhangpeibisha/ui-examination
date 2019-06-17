@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * 文字识别配置
  */
-@Configuration
+
 public class AipOcrJava extends AipOcr {
 
     /**
@@ -24,9 +24,5 @@ public class AipOcrJava extends AipOcr {
         System.setProperty("aip.log4j.conf", "path/to/your/log4j.properties");
     }
 
-    @Bean
-    public AipOcr aipOcr() {
-        return new AipOcrJava();
-    }
 
 }

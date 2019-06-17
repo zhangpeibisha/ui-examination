@@ -1,6 +1,7 @@
 package org.nix.examination.service;
 
 import cn.hutool.core.io.FileUtil;
+import cn.hutool.core.util.StrUtil;
 import com.alibaba.fastjson.JSONObject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,25 +11,31 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
 
+import java.io.File;
+
 import static org.junit.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = ExaminationApplication.class)
-public class TextRecognitionTest {
+public class ImageServiceTest {
 
     @Resource
-    private TextRecognition textRecognition;
+    private ImageService imageService;
 
     @Test
-    public void textRecognition() {
-        JSONObject jsonObject = textRecognition.textRecognition(FileUtil.readBytes("D:\\图片\\键盘.jpg"));
+    public void similarAddImage() {
+        JSONObject jsonObject = imageService.similarAddImage(FileUtil.readBytes(getFile("安全键盘.jpg")));
         System.out.println(jsonObject);
     }
 
     @Test
-    public void securityKeyRecognition() {
-        JSONObject jsonObject = textRecognition.textRecognition(FileUtil.readBytes("D:\\图片\\安全键盘.jpg"));
+    public void similarSearchImage() {
+        JSONObject jsonObject = imageService.similarSearchImage(FileUtil.readBytes(getFile("安全键盘.jpg")));
         System.out.println(jsonObject);
     }
 
+    private File getFile(String name){
+        String basePath = "D:\\work\\ui-examination\\src\\doc\\test\\"+name;
+        return new File(basePath);
+    }
 }

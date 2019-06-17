@@ -12,7 +12,7 @@ import java.util.HashMap;
  * 文字识别
  */
 @Service
-public class TextRecognition {
+public class TextRecognitionService {
 
     @Resource
     private AipOcr aipOcr;
