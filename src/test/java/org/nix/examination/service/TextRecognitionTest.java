@@ -24,4 +24,11 @@ public class TextRecognitionTest {
         JSONObject jsonObject = textRecognition.textRecognition(FileUtil.readBytes("D:\\图片\\键盘.jpg"));
         System.out.println(jsonObject);
     }
+
+    @Test
+    public void securityKeyRecognition() {
+        JSONObject jsonObject = textRecognition.textRecognition(FileUtil.readBytes("D:\\图片\\安全键盘.jpg"));
+        System.out.println(jsonObject);
+    }
+
 }
