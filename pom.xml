@@ -46,6 +46,12 @@
             <version>4.11.3</version>
         </dependency>
 
+        <!--    配置中心    -->
+        <dependency>
+            <groupId>com.ctrip.framework.apollo</groupId>
+            <artifactId>apollo-client</artifactId>
+            <version>1.1.0</version>
+        </dependency>
 
         <!--工具-->
         <dependency>

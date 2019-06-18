@@ -1,0 +1,6 @@
+server:
+  port: 9090
+app:
+  id: ui
+apollo:
+    meta: wds001:8080
