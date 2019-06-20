@@ -1,0 +1,20 @@
+# 打开APP软件
+OPEN_APP(xxxx.apk);
+
+# 进入登陆页面
+GO(login);
+
+# 点击账号输入框
+CLICK_ID(account);
+
+# 输入账号
+INPUT(account,1234456);
+
+# 点击密码输入框架
+CLICK_ID(password);
+
+#输入密码
+INPUT_ID(password,123456);
+
+# 点击确认
+CLICK_ID(submit);

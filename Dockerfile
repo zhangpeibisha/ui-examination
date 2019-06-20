@@ -6,7 +6,7 @@ MAINTAINER zhangpei
 RUN mkdir -p /usr/loacl/web
 
 # 将文件放入到容器中
-COPY ./ui_examination.jar.jar  /usr/local/web/ui_examination.jar.jar
+COPY ./ui_examination.jar.jar  /usr/local/web/ui-examination.jar
 COPY ./start.sh  /usr/local/web/start.sh
 
 # 给脚本权限
