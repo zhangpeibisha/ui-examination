@@ -20,4 +20,4 @@ mv ./target/${jar_name} ${jar_name}
 
 # 构建
 docker build -t ui-examination .
-docker run -d -p ${run_port}:${run_port} -p ${monitor_port}:${monitor_port}  -v  --name ui-examination/container ui-examination /bin/bash
+docker run -d -p ${run_port}:${run_port} -p ${monitor_port}:${monitor_port} --name ui-examination/container ui-examination /bin/bash
