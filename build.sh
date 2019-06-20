@@ -14,6 +14,7 @@ docker rm ui-examination/container
 docker rmi ui-examination
 
 # 移动文件到目的位置
+rm -f ${jar_name}
 mv ./target/${jar_name} ${jar_name}
 
 # 构建
