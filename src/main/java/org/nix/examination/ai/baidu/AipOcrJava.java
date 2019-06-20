@@ -1,8 +1,6 @@
 package org.nix.examination.ai.baidu;
 
 import com.baidu.aip.ocr.AipOcr;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * 文字识别配置
