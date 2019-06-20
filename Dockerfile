@@ -14,5 +14,5 @@ RUN chmod 777  /usr/local/web/start.sh
 
 # 进入工作目录，并执行命令
 WORKDIR   /usr/local/web
-ENTRYPOINT ["./start.sh"]
+ENTRYPOINT ["bash","./start.sh"]
 
