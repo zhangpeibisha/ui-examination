@@ -8,7 +8,7 @@ docker rm ui-examination-container
 docker rmi ui-examination
 # 移动文件到目的位置
 rm -f ui-examination.jar
-mv ./target/ui-examination.jar ui-examination.jar
+cp ./target/ui-examination.jar ui-examination.jar
 # 构建
 docker build -t ui-examination .
 docker run -d -p ${run_port}:${run_port} --name ui-examination-container ui-examination /bin/bash
